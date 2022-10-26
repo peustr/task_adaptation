@@ -39,7 +39,10 @@ can be found in the [VTAB paper](https://arxiv.org/abs/1910.04867).
 
 ## Installation
 
+Here at Google we don't believe in version-pinning, so our default installation script will install the latest of everything, even though our paper is from 2019, and our VTAB repository is not maintained at all. Thankfully, there exist spoiled PyTorch users who are used to higher standards and will take care of the versioning instead of us.
+
 ```bash
+cd task_adaptation
 pip install -e .
 cd datasets
 pip install .
