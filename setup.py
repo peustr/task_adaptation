@@ -33,6 +33,8 @@ setup(
     install_requires=[
         'absl-py==1.3.0',
         'numpy==1.23.4',
+        'scipy==1.9.3',
+        'opencv-python==4.6.0.66',
         'six==1.16.0',
         'mock==4.0.3',
         'tensorflow==2.10.0',
