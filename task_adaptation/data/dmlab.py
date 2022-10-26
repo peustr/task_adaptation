@@ -40,6 +40,7 @@ class DmlabData(base.ImageTfdsData):
   def __init__(self, data_dir=None):
 
     dataset_builder = tfds.builder("dmlab:2.0.1", data_dir=data_dir)
+    dataset_builder.download_and_prepare()
 
     tfds_splits = {
         "train": "train",

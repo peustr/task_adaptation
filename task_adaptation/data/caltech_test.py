@@ -52,6 +52,7 @@ class Caltech101Test(data_testing_lib.BaseVTABDataTest):
     # Runs over the small validation set, rather than the full train set.
     # For each class, there should be fewer than 30 items for there to be at
     # least one in the training set.
+    tf.compat.v1.disable_eager_execution()
     ds = self.dataset.get_tf_data("val", batch_size=1, epochs=1)
     ds.repeat(1)
     next_element = tf.data.make_one_shot_iterator(ds).get_next()

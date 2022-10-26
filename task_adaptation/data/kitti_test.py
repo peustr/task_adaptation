@@ -210,6 +210,7 @@ class KittiDataClosestVehicleTest(data_testing_lib.BaseVTABDataTest):
 class TestPreprocessing(tf.test.TestCase):
 
   def test_count_vehicles(self):
+    tf.compat.v1.disable_eager_execution()
     sess = tf.Session()
     x = {"image": tf.constant([0])}
     x["objects"] = {"type": tf.constant([0])}
@@ -224,6 +225,7 @@ class TestPreprocessing(tf.test.TestCase):
     self.assertEqual(3, sess.run(kitti._count_vehicles_pp(x)["label"]))
 
   def test_closest_vehicle(self):
+    tf.compat.v1.disable_eager_execution()
     sess = tf.Session()
     x = {"image": tf.constant([0])}
     x["objects"] = {
